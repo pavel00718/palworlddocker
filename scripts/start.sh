@@ -58,14 +58,14 @@ if [ ! -f /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini ]; then
     # cp /palworld/DefaultPalWorldSettings.ini /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
 fi
 
-if [ -n "${RCON_ENABLED}" ]; then
-    echo "RCON_ENABLED=${RCON_ENABLED}"
-    sed -i "s/RCONEnabled=[a-zA-Z]*/RCONEnabled=$RCON_ENABLED/" /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-fi
-if [ -n "${RCON_PORT}" ]; then
-    echo "RCON_PORT=${RCON_PORT}"
-    sed -i "s/RCONPort=[0-9]*/RCONPort=$RCON_PORT/" /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
-fi
+#if [ -n "${RCON_ENABLED}" ]; then
+    # echo "RCON_ENABLED=${RCON_ENABLED}"
+    # sed -i "s/RCONEnabled=[a-zA-Z]*/RCONEnabled=$RCON_ENABLED/" /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+# fi
+# if [ -n "${RCON_PORT}" ]; then
+    # echo "RCON_PORT=${RCON_PORT}"
+    # sed -i "s/RCONPort=[0-9]*/RCONPort=$RCON_PORT/" /palworld/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
+# fi
 
 # Configure RCON settings
 cat >~/.rcon-cli.yaml  <<EOL
